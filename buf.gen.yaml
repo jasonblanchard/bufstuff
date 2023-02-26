@@ -1,0 +1,22 @@
+version: v1
+managed:
+  enabled: true
+  go_package_prefix:
+    default: github.com/jasonblanchard/bufstuff/gen/go
+plugins:
+  - plugin: buf.build/protocolbuffers/go
+    out: gen/go
+    opt: paths=source_relative
+  - plugin: buf.build/bufbuild/connect-go
+    out: gen/go
+    opt: paths=source_relative
+  - plugin: buf.build/bufbuild/es
+    out: node/gen/js
+  - plugin: buf.build/bufbuild/connect-es
+    out: node/gen/js
+  - plugin: buf.build/bufbuild/connect-query
+    out: client/gen/js
+  - plugin: buf.build/bufbuild/es
+    out: client/gen/js
+  - plugin: buf.build/bufbuild/connect-web
+    out: client/gen/js

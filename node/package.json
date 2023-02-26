@@ -1,0 +1,20 @@
+{
+  "name": "bufstuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "npm run build && node dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@buf/googleapis_googleapis.bufbuild_connect-es": "^0.7.0-20221214150216-75b4300737fb.1",
+    "@bufbuild/connect-node": "^0.7.0"
+  }
+}
