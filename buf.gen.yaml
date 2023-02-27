@@ -20,3 +20,5 @@ plugins:
     out: client/gen/js
   - plugin: buf.build/bufbuild/connect-web
     out: client/gen/js
+  - plugin: buf.build/bufbuild/connect-es
+    out: client/gen/js
