@@ -17,7 +17,7 @@ const queryClient = new QueryClient();
 
 export default function Home() {
   const transport = createConnectTransport({
-    baseUrl: "/",
+    baseUrl: "/api",
   });
 
   return (
@@ -53,5 +53,10 @@ function Content() {
     return <div>Error</div>;
   }
 
-  return <div>{data.pet?.name}</div>;
+  return (
+    <div>
+      <div>{data.pet?.name}</div>
+      <div>{data.pet?.createdAt?.toDate()?.toLocaleDateString()}</div>
+    </div>
+  );
 }
